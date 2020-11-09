@@ -35,6 +35,8 @@ optimizer = SPSA()
 # setup the variational form for VQE
 from qiskit.circuit.library import TwoLocal
 var_form = TwoLocal(qubit_op.num_qubits, ['ry', 'rz'], 'cz', reps=5, entanglement='full')
+print("Ansatz quantum circuit:")
+print(var_form)
 
 # setup and run VQE
 from qiskit.aqua.algorithms import VQE
