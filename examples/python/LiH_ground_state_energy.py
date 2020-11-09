@@ -13,7 +13,7 @@ molecule = driver.run()
 from qiskit.chemistry.core import Hamiltonian, TransformationType, QubitMappingType
 operator =  Hamiltonian(
                 transformation=TransformationType.FULL,
-                qubit_mapping=QubitMappingType.PARITY,
+                qubit_mapping=QubitMappingType.PARITY, # Other choices: JORDAN_WIGNER, BRAVYI_KITAEV
                 two_qubit_reduction=True,
                 freeze_core=True,
                 orbital_reduction=[-3, -2])
